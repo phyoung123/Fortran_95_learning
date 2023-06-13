@@ -1,0 +1,24 @@
+输入与输出命令
+
+EX0401.F90
+program ex0401 
+write(*,*) "Hello"
+stop
+end
+
+这个Fortran程序只有一个命令，就是write, 其后面的两个*有各自的意义.
+第一个代表: 输出的位置，*表示默认输出在屏幕上
+第二个代表: 不特别设置输出格式
+
+完整的 write 写法应该是：
+write(UNIT=*, FMT=*) "Hello"
+
+想要在输出的字符串中输出引号""，则要同时输入两个引号"""", 例如 write(*,*) "My Name is ""PHYANG""."
+
+
+END 用来封装代码，可以只用END，可以用 END program； 还可以用END program name 这个name指的是定义函数时program后面的命名。
+
+
+同时还可以使用PRINT函数
+print *, "Hello"
+只有一个 * ，表示不限制输出格式，print只能在屏幕上输出
