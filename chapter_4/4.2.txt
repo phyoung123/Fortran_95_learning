@@ -1,0 +1,59 @@
+声明
+
+EX0404.F90
+program ex040   ！可以省略，但是最好不要省略
+integer a  ！一个名字为a的整型变量
+a=3
+write(*,*) "a=",a
+stop  ！可以省略
+end
+
+Fortran 的四种基本数据类型 整型(integer)、浮点型(real)、字符(character)、布尔变量(logical)
+
+4-2-1 整数型(INTEGERAL)
+integer a,b,c !可同时声明多个整数型变量
+integer(kind=4) a !声明一个长整型变量，用 4bytes 来存放整数
+
+4-2-2 浮点型(real)
+声明浮点数的方法：
+real a
+real(kind=4) a   !单精度 4bytes 浮点数
+real(kind=8) a   !双精度 8bytes 浮点数
+
+4-2-3 复数(COMPLEX)
+声明复数方法：
+complex a   ! 复数是由实部和虚部构成，这两个数字由浮点数保存
+a=(x,y)， x为实部，y为虚部  a=x+yi
+
+4-2-4 字符及字符串(CHARACTER)
+声明字符串的方法：
+character a
+character(len=10) a !字符串的长度为10
+
+EX0413.F90
+PROGRAM EX0413
+CHARACTER(LEN=20) STRING
+STRING="GOOD MORNING."
+WRITE(*,*) STRING 
+STRING(6：)="EVENING."  !重新设置字符串从第6位字符之后的字符串
+WRITE(*,*) STRING 
+stop
+END 
+输出：
+GOOD MORNING
+GOOD EVENING
+
+4-2-5 逻辑变量(LOGICAL)
+声明方法：
+LOGICAL A 
+A = .TRUE. 设置为真，前后都要两点
+B = .FALSE. 设置为假
+
+PROGRAM EX0416
+LOGICAL  A,B 
+A=.TRUE.
+B=.FALSE.
+WRITE(*,*) A,B 
+END 
+输出： 
+T F 
