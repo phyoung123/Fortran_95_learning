@@ -1,0 +1,11 @@
+4-3 read命令
+实时接受用户从键盘输入的命令
+
+PROGRAM EX0417
+INTEGER A
+READ(*,*) A         ！READ 命令等待用户输入
+WRITE(*,*) A
+STOP
+END
+
+

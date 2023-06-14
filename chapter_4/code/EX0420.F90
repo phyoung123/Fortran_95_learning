@@ -1,0 +1,6 @@
+PROGRAM EX0420
+INTEGER A
+A=100
+WRITE(*,100) A   !使用行代码100的格式来输出变量
+100 FORMAT(I4)   !最前面的100是行代码，I4表示只用4个字符
+END
